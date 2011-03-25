@@ -1,0 +1,11 @@
+#Post:
+#  id_post:	1
+#  titulo: 	'Hola mundo desde el vim'
+#  resumen:	'Este es mi primer post del blog'
+#  texto:	'Lorem Ipsum Lorem Ipsum... hola mundo'
+
+#Comentario:
+#  pk_post: 	 1
+#  id_comentario: 1
+#  autor:	'Pavel'
+#  email:	'zahori@gmail.com'

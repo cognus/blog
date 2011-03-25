@@ -1,0 +1,49 @@
+Mar 24 23:15:35 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Mar 24 23:15:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 24 23:15:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 24 23:15:35 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Mar 24 23:15:35 symfony [info] {sfPHPView} Render "/home/pavel/desarrollos/php/blog/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Mar 24 23:15:35 symfony [info] {sfPHPView} Decorate content with "/home/pavel/desarrollos/php/blog/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 24 23:15:35 symfony [info] {sfPHPView} Render "/home/pavel/desarrollos/php/blog/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 24 23:15:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 24 23:15:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 24 23:15:35 symfony [info] {sfWebDebugLogger} Configuration 284.93 ms (9)
+Mar 24 23:15:35 symfony [info] {sfWebDebugLogger} Factories 255.35 ms (1)
+Mar 24 23:15:35 symfony [info] {sfWebDebugLogger} Action "default/index" 0.32 ms (1)
+Mar 24 23:15:35 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 35.31 ms (1)
+Mar 24 23:15:35 symfony [info] {sfWebResponse} Send content (30831 o)
+Mar 25 12:37:57 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Mar 25 12:37:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 25 12:37:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 25 12:37:58 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Mar 25 12:37:58 symfony [info] {sfPHPView} Render "/home/pavel/desarrollos/php/blog/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Mar 25 12:37:58 symfony [info] {sfPHPView} Decorate content with "/home/pavel/desarrollos/php/blog/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 25 12:37:58 symfony [info] {sfPHPView} Render "/home/pavel/desarrollos/php/blog/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 25 12:37:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 25 12:37:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 25 12:37:58 symfony [info] {sfWebDebugLogger} Configuration 659.98 ms (9)
+Mar 25 12:37:58 symfony [info] {sfWebDebugLogger} Factories 890.59 ms (1)
+Mar 25 12:37:58 symfony [info] {sfWebDebugLogger} Action "default/index" 0.31 ms (1)
+Mar 25 12:37:58 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 209.28 ms (1)
+Mar 25 12:37:58 symfony [info] {sfWebResponse} Send content (30638 o)
+Mar 25 14:00:04 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Mar 25 14:00:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 25 14:00:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 25 14:00:04 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Mar 25 14:00:04 symfony [info] {sfPHPView} Render "/home/pavel/desarrollos/php/blog/lib/vendor/symfony/lib/controller/default/templates/indexSuccess.php"
+Mar 25 14:00:04 symfony [info] {sfPHPView} Decorate content with "/home/pavel/desarrollos/php/blog/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 25 14:00:04 symfony [info] {sfPHPView} Render "/home/pavel/desarrollos/php/blog/lib/vendor/symfony/lib/controller/default/templates/defaultLayout.php"
+Mar 25 14:00:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 25 14:00:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 25 14:00:04 symfony [info] {sfWebDebugLogger} Configuration 160.29 ms (10)
+Mar 25 14:00:04 symfony [info] {sfWebDebugLogger} Factories 110.78 ms (1)
+Mar 25 14:00:04 symfony [info] {sfWebDebugLogger} Action "default/index" 0.33 ms (1)
+Mar 25 14:00:04 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 29.54 ms (1)
+Mar 25 14:00:04 symfony [info] {sfWebResponse} Send content (30596 o)
+Mar 25 15:02:59 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /post with parameters array (  'module' => 'post',  'action' => 'index',)
+Mar 25 15:02:59 symfony [info] {sfFrontWebController} Action "post/index" does not exist
+Mar 25 15:02:59 symfony [err] {sfError404Exception} Action "post/index" does not exist.
+Mar 25 15:02:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Mar 25 15:02:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 25 15:02:59 symfony [info] {sfWebDebugLogger} Configuration 190.87 ms (6)
+Mar 25 15:02:59 symfony [info] {sfWebDebugLogger} Factories 279.10 ms (1)
