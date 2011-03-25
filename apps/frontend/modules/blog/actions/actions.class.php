@@ -12,27 +12,27 @@ class blogActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->posts = Doctrine_Core::getTable('Post')
+    $this->posts = Doctrine_Core::getTable('post')
       ->createQuery('a')
       ->execute();
   }
 
   public function executeShow(sfWebRequest $request)
   {
-    $this->post = Doctrine_Core::getTable('Post')->find(array($request->getParameter('id_post')));
+    $this->post = Doctrine_Core::getTable('post')->find(array($request->getParameter('id')));
     $this->forward404Unless($this->post);
   }
 
   public function executeNew(sfWebRequest $request)
   {
-    $this->form = new PostForm();
+    $this->form = new postForm();
   }
 
   public function executeCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST));
 
-    $this->form = new PostForm();
+    $this->form = new postForm();
 
     $this->processForm($request, $this->form);
 
@@ -41,15 +41,15 @@ class blogActions extends sfActions
 
   public function executeEdit(sfWebRequest $request)
   {
-    $this->forward404Unless($post = Doctrine_Core::getTable('Post')->find(array($request->getParameter('id_post'))), sprintf('Object post does not exist (%s).', $request->getParameter('id_post')));
-    $this->form = new PostForm($post);
+    $this->forward404Unless($post = Doctrine_Core::getTable('post')->find(array($request->getParameter('id'))), sprintf('Object post does not exist (%s).', $request->getParameter('id')));
+    $this->form = new postForm($post);
   }
 
   public function executeUpdate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
-    $this->forward404Unless($post = Doctrine_Core::getTable('Post')->find(array($request->getParameter('id_post'))), sprintf('Object post does not exist (%s).', $request->getParameter('id_post')));
-    $this->form = new PostForm($post);
+    $this->forward404Unless($post = Doctrine_Core::getTable('post')->find(array($request->getParameter('id'))), sprintf('Object post does not exist (%s).', $request->getParameter('id')));
+    $this->form = new postForm($post);
 
     $this->processForm($request, $this->form);
 
@@ -60,7 +60,7 @@ class blogActions extends sfActions
   {
     $request->checkCSRFProtection();
 
-    $this->forward404Unless($post = Doctrine_Core::getTable('Post')->find(array($request->getParameter('id_post'))), sprintf('Object post does not exist (%s).', $request->getParameter('id_post')));
+    $this->forward404Unless($post = Doctrine_Core::getTable('post')->find(array($request->getParameter('id'))), sprintf('Object post does not exist (%s).', $request->getParameter('id')));
     $post->delete();
 
     $this->redirect('blog/index');
@@ -73,7 +73,7 @@ class blogActions extends sfActions
     {
       $post = $form->save();
 
-      $this->redirect('blog/edit?id_post='.$post->getIdPost());
+      $this->redirect('blog/edit?id='.$post->getId());
     }
   }
 }

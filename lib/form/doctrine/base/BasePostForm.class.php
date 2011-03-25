@@ -15,14 +15,14 @@ abstract class BasePostForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id_post' => new sfWidgetFormInputHidden(),
+      'id'      => new sfWidgetFormInputHidden(),
       'titulo'  => new sfWidgetFormInputText(),
       'resumen' => new sfWidgetFormTextarea(),
       'texto'   => new sfWidgetFormTextarea(),
     ));
 
     $this->setValidators(array(
-      'id_post' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id_post')), 'empty_value' => $this->getObject()->get('id_post'), 'required' => false)),
+      'id'      => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'titulo'  => new sfValidatorString(array('max_length' => 255)),
       'resumen' => new sfValidatorString(array('max_length' => 4000, 'required' => false)),
       'texto'   => new sfValidatorString(array('max_length' => 4000)),

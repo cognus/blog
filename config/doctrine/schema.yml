@@ -1,7 +1,7 @@
 Post:
   tableName: post
   columns:
-    id_post:       { type: integer(4), primary: true, notnull: true }
+    id:       { type: integer(4), primary: true, notnull: true }
     titulo:        { type: string(255), notnull: true }
     resumen:	   { type: string(4000) }
     texto:	   { type: string(4000), notnull: true }
@@ -10,11 +10,10 @@ Post:
 Comentario:
   tableName: comentario
   columns:
-    pk_post:
-      type: integer(4)
-    id_comentario: { type: integer, primary: true, notnull: true }
+    post_id: 	   { type: integer(4) }
+    id: 	   { type: integer, primary: true, notnull: true }
     autor:	   { type: string(255) }
     email:	   { type: string(255), notnull: true }
-#    texto:	   { type: string(4000), notnull: true }
+    texto:	   { type: string(4000), notnull: true }
 
 

@@ -13,15 +13,17 @@ abstract class BaseComentarioFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'pk_post'       => new sfWidgetFormFilterInput(),
-      'autor'         => new sfWidgetFormFilterInput(),
-      'email'         => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'post_id' => new sfWidgetFormFilterInput(),
+      'autor'   => new sfWidgetFormFilterInput(),
+      'email'   => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'texto'   => new sfWidgetFormFilterInput(array('with_empty' => false)),
     ));
 
     $this->setValidators(array(
-      'pk_post'       => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
-      'autor'         => new sfValidatorPass(array('required' => false)),
-      'email'         => new sfValidatorPass(array('required' => false)),
+      'post_id' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'autor'   => new sfValidatorPass(array('required' => false)),
+      'email'   => new sfValidatorPass(array('required' => false)),
+      'texto'   => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('comentario_filters[%s]');
@@ -41,10 +43,11 @@ abstract class BaseComentarioFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'pk_post'       => 'Number',
-      'id_comentario' => 'Number',
-      'autor'         => 'Text',
-      'email'         => 'Text',
+      'post_id' => 'Number',
+      'id'      => 'Number',
+      'autor'   => 'Text',
+      'email'   => 'Text',
+      'texto'   => 'Text',
     );
   }
 }

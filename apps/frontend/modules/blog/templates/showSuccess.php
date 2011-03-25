@@ -1,8 +1,8 @@
 <table>
   <tbody>
     <tr>
-      <th>Id post:</th>
-      <td><?php echo $post->getIdPost() ?></td>
+      <th>Id:</th>
+      <td><?php echo $post->getId() ?></td>
     </tr>
     <tr>
       <th>Titulo:</th>
@@ -21,6 +21,6 @@
 
 <hr />
 
-<a href="<?php echo url_for('blog/edit?id_post='.$post->getIdPost()) ?>">Edit</a>
+<a href="<?php echo url_for('blog/edit?id='.$post->getId()) ?>">Edit</a>
 &nbsp;
 <a href="<?php echo url_for('blog/index') ?>">List</a>

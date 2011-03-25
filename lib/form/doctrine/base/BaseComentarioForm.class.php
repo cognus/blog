@@ -15,17 +15,19 @@ abstract class BaseComentarioForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'pk_post'       => new sfWidgetFormInputText(),
-      'id_comentario' => new sfWidgetFormInputHidden(),
-      'autor'         => new sfWidgetFormInputText(),
-      'email'         => new sfWidgetFormInputText(),
+      'post_id' => new sfWidgetFormInputText(),
+      'id'      => new sfWidgetFormInputHidden(),
+      'autor'   => new sfWidgetFormInputText(),
+      'email'   => new sfWidgetFormInputText(),
+      'texto'   => new sfWidgetFormTextarea(),
     ));
 
     $this->setValidators(array(
-      'pk_post'       => new sfValidatorInteger(array('required' => false)),
-      'id_comentario' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id_comentario')), 'empty_value' => $this->getObject()->get('id_comentario'), 'required' => false)),
-      'autor'         => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'email'         => new sfValidatorString(array('max_length' => 255)),
+      'post_id' => new sfValidatorInteger(array('required' => false)),
+      'id'      => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'autor'   => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'email'   => new sfValidatorString(array('max_length' => 255)),
+      'texto'   => new sfValidatorString(array('max_length' => 4000)),
     ));
 
     $this->widgetSchema->setNameFormat('comentario[%s]');

@@ -41,7 +41,7 @@ abstract class BasePostFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id_post' => 'Number',
+      'id'      => 'Number',
       'titulo'  => 'Text',
       'resumen' => 'Text',
       'texto'   => 'Text',

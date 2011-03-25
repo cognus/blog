@@ -47,3 +47,48 @@ Mar 25 15:02:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Fou
 Mar 25 15:02:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
 Mar 25 15:02:59 symfony [info] {sfWebDebugLogger} Configuration 190.87 ms (6)
 Mar 25 15:02:59 symfony [info] {sfWebDebugLogger} Factories 279.10 ms (1)
+Mar 25 17:33:48 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /post with parameters array (  'module' => 'post',  'action' => 'index',)
+Mar 25 17:33:48 symfony [info] {sfFrontWebController} Action "post/index" does not exist
+Mar 25 17:33:48 symfony [err] {sfError404Exception} Action "post/index" does not exist.
+Mar 25 17:33:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Mar 25 17:33:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 25 17:33:48 symfony [info] {sfWebDebugLogger} Configuration 263.70 ms (5)
+Mar 25 17:33:48 symfony [info] {sfWebDebugLogger} Factories 268.10 ms (1)
+Mar 25 17:50:32 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/blog/" (/).
+Mar 25 17:50:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Mar 25 17:50:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 25 17:50:32 symfony [info] {sfWebDebugLogger} Configuration 191.00 ms (6)
+Mar 25 17:50:32 symfony [info] {sfWebDebugLogger} Factories 273.53 ms (1)
+Mar 25 17:51:13 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /blog with parameters array (  'module' => 'blog',  'action' => 'index',)
+Mar 25 17:51:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 25 17:51:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 25 17:51:13 symfony [info] {blogActions} Call "blogActions->executeIndex()"
+Mar 25 17:51:13 symfony [info] {Doctrine_Connection_Pgsql} exec : SET NAMES 'UTF8' - ()
+Mar 25 17:51:13 symfony [info] {Doctrine_Connection_Pgsql} query : SELECT p.id AS p__id, p.titulo AS p__titulo, p.resumen AS p__resumen, p.texto AS p__texto FROM post p - ()
+Mar 25 17:51:13 symfony [info] {sfPHPView} Render "/home/pavel/desarrollos/php/blog/apps/frontend/modules/blog/templates/indexSuccess.php"
+Mar 25 17:51:13 symfony [info] {sfPHPView} Decorate content with "/home/pavel/desarrollos/php/blog/apps/frontend/templates/layout.php"
+Mar 25 17:51:13 symfony [info] {sfPHPView} Render "/home/pavel/desarrollos/php/blog/apps/frontend/templates/layout.php"
+Mar 25 17:51:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 25 17:51:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 25 17:51:13 symfony [info] {sfWebDebugLogger} Configuration 46.07 ms (10)
+Mar 25 17:51:13 symfony [info] {sfWebDebugLogger} Factories 84.93 ms (1)
+Mar 25 17:51:13 symfony [info] {sfWebDebugLogger} Action "blog/index" 414.19 ms (1)
+Mar 25 17:51:13 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Mar 25 17:51:13 symfony [info] {sfWebDebugLogger} View "Success" for "blog/index" 51.97 ms (1)
+Mar 25 17:51:13 symfony [info] {sfWebResponse} Send content (32188 o)
+Mar 25 17:51:18 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /blog/new with parameters array (  'module' => 'blog',  'action' => 'new',)
+Mar 25 17:51:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 25 17:51:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 25 17:51:18 symfony [info] {blogActions} Call "blogActions->executeNew()"
+Mar 25 17:51:18 symfony [info] {sfPHPView} Render "/home/pavel/desarrollos/php/blog/apps/frontend/modules/blog/templates/newSuccess.php"
+Mar 25 17:51:18 symfony [info] {sfPartialView} Render "/home/pavel/desarrollos/php/blog/apps/frontend/modules/blog/templates/_form.php"
+Mar 25 17:51:18 symfony [info] {sfPHPView} Decorate content with "/home/pavel/desarrollos/php/blog/apps/frontend/templates/layout.php"
+Mar 25 17:51:18 symfony [info] {sfPHPView} Render "/home/pavel/desarrollos/php/blog/apps/frontend/templates/layout.php"
+Mar 25 17:51:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 25 17:51:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 25 17:51:18 symfony [info] {sfWebDebugLogger} Configuration 3.98 ms (9)
+Mar 25 17:51:18 symfony [info] {sfWebDebugLogger} Factories 91.76 ms (1)
+Mar 25 17:51:18 symfony [info] {sfWebDebugLogger} Action "blog/new" 59.38 ms (1)
+Mar 25 17:51:18 symfony [info] {sfWebDebugLogger} View "Success" for "blog/new" 52.50 ms (1)
+Mar 25 17:51:18 symfony [info] {sfWebDebugLogger} Partial "blog/_form" 22.36 ms (1)
+Mar 25 17:51:18 symfony [info] {sfWebResponse} Send content (33984 o)
